@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Installation help
+    url: https://github.com/nikmanderss/lean-cad-kit/blob/main/INSTALL.md
+    about: Installing Python, FreeCAD and Claude Code, wiring a project, checking it works.
+  - name: Getting started
+    url: https://github.com/nikmanderss/lean-cad-kit/blob/main/GETTING_STARTED.md
+    about: The project folder, the first session, the first edit and delivery.

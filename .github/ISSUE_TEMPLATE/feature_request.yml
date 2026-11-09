@@ -1,0 +1,27 @@
+name: Feature request
+description: Suggest a new edit type, route, command or improvement.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to do?
+      description: The modelling task or workflow, not the solution.
+    validations:
+      required: true
+  - type: input
+    id: area
+    attributes:
+      label: Edit type, route or command it touches
+      placeholder: "hole / mesh route / kit deliver / hooks"
+  - type: textarea
+    id: workaround
+    attributes:
+      label: How do you do it today?
+      description: Your current workaround, if any.
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested approach
+      description: Optional. How you think the kit could support it.

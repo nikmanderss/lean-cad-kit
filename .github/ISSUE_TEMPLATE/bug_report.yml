@@ -1,0 +1,85 @@
+name: Bug report
+description: Something in the kit fails or behaves wrongly.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Most problems depend on the setup, so please fill in every field.
+        Setup help is in [INSTALL.md](https://github.com/nikmanderss/lean-cad-kit/blob/main/INSTALL.md) and [GETTING_STARTED.md](https://github.com/nikmanderss/lean-cad-kit/blob/main/GETTING_STARTED.md).
+  - type: input
+    id: kit_version
+    attributes:
+      label: Kit version
+      description: The release tag you installed.
+      placeholder: v2026.11.09
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 23H2
+    validations:
+      required: true
+  - type: input
+    id: freecad
+    attributes:
+      label: FreeCAD version
+      placeholder: "1.1"
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: 3.12.x (64-bit, python.org)
+    validations:
+      required: true
+  - type: dropdown
+    id: model
+    attributes:
+      label: Orchestrator model in Claude Code
+      options:
+        - Opus
+        - Fable
+        - Other / not sure
+    validations:
+      required: true
+  - type: input
+    id: command
+    attributes:
+      label: Kit command or edit type
+      description: The `kit` command that failed, or the edit type you were running.
+      placeholder: "kit check / sketch extrude / burrito skin route"
+    validations:
+      required: true
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead. Include the error message.
+    validations:
+      required: true
+  - type: textarea
+    id: selftests
+    attributes:
+      label: Self-test output
+      description: Output of `_run_selftests.py`.
+      render: text
+  - type: textarea
+    id: hook_status
+    attributes:
+      label: Hook status
+      description: Output of `install_lean_hooks.py --project "<your project>" --status`.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I ran `install_lean_hooks.py --all` after my last kit update.
+        - label: I opened the Claude Code session in the project folder and restarted it after wiring the hooks.
+        - label: I removed anything confidential (part names, client details, files) from this report.
+          required: true
