@@ -1,0 +1,21 @@
+# Normalise line endings for text files
+* text=auto
+
+# Windows-only scripts keep CRLF
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files: never diff or merge as text
+*.docx binary
+*.pptx binary
+*.FCStd binary
+*.fcstd binary
+*.brep binary
+*.step binary
+*.stp binary
+*.stl binary
+*.3mf binary
+*.png binary
+*.jpg binary
+*.zip binary
