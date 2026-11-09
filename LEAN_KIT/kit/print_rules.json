@@ -1,0 +1,23 @@
+{
+ "_what": "Print-shop rules `kit printcheck --rules <name>` judges a body against. Numbers read off the shop's own pages on the date given; an agent RE-READS the page before an order is placed and updates the date - shops change limits without notice. Add a shop or process as a new key; every field below is used by the check, `notes` is printed with the verdict.",
+ "jlc_mjf_pa12": {
+  "shop": "JLCPCB 3D printing", "process": "MJF", "material": "PA12 (HP 3D High Reusability PA12)", "read": "2026-09-24",
+  "build_mm": [370, 276, 360],
+  "wall_recommended_mm": 2.0, "wall_min_mm": 1.0, "auto_check_wall_mm": 1.2, "thinnest_min_mm": 0.8,
+  "tol_abs_mm": 0.3, "tol_pct": 0.4, "tol_rule": "the larger of tol_abs_mm and tol_pct of the dimension",
+  "file_max_mb": 100, "file_formats": ["stl", "step", "obj", "3mf"], "one_model_per_file": true, "units": "mm",
+  "supports": false, "escape_hole_min_mm": 2.5, "powder_trap_slit_mm": 2.5,
+  "review": "automatic check (dimensions, walls, thinnest part, weight) then a manual engineer review of 4-6 business hours; anything the auto-check flagged gets a question or a print-at-your-own-risk",
+  "notes": "no supports, unfused powder is the support; parts are unpacked and bead-blasted; slits narrower than ~2.5 mm keep their powder; matte grey ~0.1 mm grain, dye black on request; PA12 keeps shape well past 100 C"
+ },
+ "jlc_9000he": {
+  "shop": "JLCPCB 3D printing", "process": "SLA", "material": "9000HE resin (white)", "read": "2026-09-24",
+  "build_mm": [580, 580, 380],
+  "wall_recommended_mm": 1.5, "wall_min_mm": 0.8, "auto_check_wall_mm": 1.2, "thinnest_min_mm": 0.8,
+  "tol_abs_mm": 0.3, "tol_pct": 0.3, "tol_rule": "+-0.3 % over 100 mm",
+  "file_max_mb": 100, "file_formats": ["stl", "step", "obj", "3mf"], "one_model_per_file": true, "units": "mm",
+  "supports": true, "support_tip_mm": 0.4, "hdt_c": 60,
+  "review": "as jlc_mjf_pa12",
+  "notes": "supports on every down-facing surface at the build orientation, ~0.4 mm tips, removed by hand and sanded on outer faces; inside ducting the nubs stay (0.2-0.5 mm); say in the order notes which faces must be built facing up; HDT 60 C - fit checks and painted show parts, not heat or UV service"
+ }
+}
