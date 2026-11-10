@@ -1,5 +1,7 @@
 # Lean CAD Kit
 
+![Lean CAD Kit: AI CAD edits on true B-rep solids, not meshes. A FreeCAD part with a new extruded feature, its sketch outline and a 20.00 dimension, marked valid, one solid, reviewed.](https://raw.githubusercontent.com/nikmanderss/lean-cad-kit/main/.github/social-preview.png)
+
 A process kit that lets **Claude Code** make controlled, reviewable edits to **FreeCAD** solid models.
 
 **New to the kit? Read [LEAN_KIT_USER_GUIDE_2026-11-06.docx](LEAN_KIT_USER_GUIDE_2026-11-06.docx) first** - the user guide (Word). The pages below are the reference.
