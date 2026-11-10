@@ -9,6 +9,29 @@ shape on a known plane and given depth, built as its own piece, checked, looked 
 the model of record. Claude Code runs the work; the kit supplies the method, the commands and the gates that
 keep an agent from guessing, skipping the pictures, or editing outside its project.
 
+## Why this kit
+
+Most AI CAD tools either generate a new part from a text prompt or hand back a mesh (STL) that has to be
+cleaned up and rebuilt before it is any use for engineering. This kit works the other way round:
+
+- **It edits the model you already have.** Your part stays the model of record. Each change is a small,
+  named feature added to it, not a fresh guess at the whole part.
+- **The result stays a true B-rep solid.** Edits are flat sketches on known planes given depth (extrude,
+  revolve, cut, fuse, round), so the model keeps exact faces, edges and dimensions that you can keep
+  working on in FreeCAD, export to STEP, machine or print. The mesh routes are separate, named edit types,
+  and the burrito route rebuilds a messy region back into clean B-rep.
+- **Every change is checked before it lands.** `kit check` confirms the piece is valid and still one
+  solid, the kernel and tessellation volumes agree, the face count is in range, nothing changed outside the
+  edit's region box, and no wall was punched through where the job card said it must not be.
+- **Pictures come before numbers.** Every result is rendered and reviewed as an orbit of frames by
+  reviewer agents and the orchestrator, and the hooks refuse a measurement taken before its subject has
+  been looked at.
+- **The agent cannot quietly go off-script.** Claude Code hooks refuse FreeCAD runs outside the kit,
+  writes outside the project, and ending a turn with work still open. Every number on a job card is
+  measured, not guessed.
+- **Every edit leaves a trail.** Job folders, cards, renders, review frames and a handoff at session close
+  show what changed, why and with which numbers, so the next session picks up where this one stopped.
+
 ## What is in it
 
 | | |
