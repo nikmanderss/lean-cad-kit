@@ -31,6 +31,10 @@ cleaned up and rebuilt before it is any use for engineering. This kit works the 
   measured, not guessed.
 - **Every edit leaves a trail.** Job folders, cards, renders, review frames and a handoff at session close
   show what changed, why and with which numbers, so the next session picks up where this one stopped.
+- **Lean on context, hence the name.** A session never reads the whole kit. The contract is pushed in at
+  session start, and `kit route` maps the request to its edit type and the few pages that step needs, so the
+  agent reads only what matters for the job in hand. Reading the full kit every session would fill the context
+  window and push the session into compaction almost every other message.
 
 ## What is in it
 
